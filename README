@@ -1,0 +1,15 @@
+This file should include 
+	1) directions for compiling your code, 
+		-"make all" the build all the files
+		-"make clean" to clear all the *.c generated execuitable 	
+	2) directions for running your code, 
+		-./othello-*
+	3) any other comments
+
+Trees of various flavors are common -- perhaps the simplest is the unbalanced binary tree, which will be the subject of this assignment. In general, you will discover that binary trees are not the most scalable of data structures, but they are conceptually simple.
+this code gives an implementation of a concurrent binary tree, which has been (somewhat) optimized for a large number of concurrent machines 
+The tree in question is used to implement a map abstraction. Maps are used to associate a unique key with a value, which for simplicity is also unique. Maps can be implemented with a variety of data structures (hash tables are common), though your implementation must use a binary tree. The tree supports the following primitive operations in parallel:
+    int  Lookup( int key );
+    void Remove( int key );
+    void Set( int key, int value );
+The above functions may be called in parallel by any number of threads, up to the number of thread specified in the constructor of the tree. The tree's constructor and destructor, as well as the print() function, need not thread-safe.
